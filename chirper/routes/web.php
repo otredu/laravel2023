@@ -28,7 +28,7 @@ Route::get('/dashboard', function () {
 
 // lisätty
 Route::resource('chirps', ChirpController::class)
-    ->only(['index', 'store', 'edit', 'update']) // lisätty: edit, update
+    ->only(['index', 'store', 'edit', 'update', 'destroy']) // lisätty: edit, update
     ->middleware(['auth', 'verified']);
 // 
 
